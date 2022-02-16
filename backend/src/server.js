@@ -13,7 +13,7 @@ app.listen(port, () => {
   app.get('/', (req, res) => {
     return res.status(200).json({
       message: `Hello World from port: ${port}`,
-      author: process.env.AUTHOR
+      author: `- ${process.env.AUTHOR}`
     })
   })
 })
