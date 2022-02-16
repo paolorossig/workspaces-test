@@ -1,0 +1,21 @@
+{
+  "name": "edutech",
+  "private": true,
+  "scripts": {
+    "front:dev": "vite frontend",
+    "front:build": "vite build frontend",
+    "front:preview": "vite preview frontend",
+    "back:dev": "nodemon backend/src/server.js"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "prettier": "^2.5.1"
+  }
+}
