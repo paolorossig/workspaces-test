@@ -13,7 +13,7 @@ function App() {
     const getData = async () => {
       try {
         const res = await fetch(serverUrl).then((res) => res.json())
-        setResponse(res?.message)
+        setResponse(res)
       } catch (error) {
         console.log(error)
       }
@@ -26,7 +26,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Backend Response:</p>
-        <p>{response}</p>
+        <p>{response?.message}</p>
+        <p>Author:</p>
+        <p>{response?.author}</p>
       </header>
     </div>
   )
