@@ -4,7 +4,10 @@ import './App.css'
 
 function App() {
   const [response, setResponse] = useState('')
-  const serverUrl = import.meta.env.VITE_SERVER_URL
+  const serverUrl =
+    process.env.NODE_ENV === 'production'
+      ? import.meta.env.VITE_SERVER_PROD_URL
+      : import.meta.env.VITE_SERVER_DEV_URL
 
   useEffect(() => {
     const getData = async () => {
