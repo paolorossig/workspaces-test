@@ -5,7 +5,8 @@
     "front:dev": "vite frontend",
     "front:build": "vite build frontend",
     "front:preview": "vite preview frontend",
-    "back:dev": "nodemon backend/src/server.js"
+    "back:dev": "nodemon backend/src/server.js",
+    "lint": "eslint . --ext .js,.jsx"
   },
   "workspaces": [
     "frontend",

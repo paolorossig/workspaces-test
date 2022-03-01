@@ -29,6 +29,10 @@ function App() {
         <p>{response?.message}</p>
         <p>Author:</p>
         <p>{response?.author}</p>
+        <p>Users</p>
+        {response?.users?.map((user) => (
+          <p key={user._id}>{user.email}</p>
+        ))}
       </header>
     </div>
   )
